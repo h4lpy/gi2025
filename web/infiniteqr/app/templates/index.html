@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QR Flag Hunt</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <header>
+        <h1>🕵️‍♂️ QR Flag Hunt Challenge</h1>
+    </header>
+
+    <main>
+        <p style="font-weight: 600; font-size: 1.2rem; margin-bottom: 15px;">
+            Scroll down to reveal QR codes. One of them contains the secret flag. Can you find it?
+        </p>
+
+        <div id="qr-container"></div>
+        <div id="loader">Scroll down to load more QR codes...</div>
+    </main>
+
+    <footer>
+        &copy; 2025 CTF Challenge — Created by Liam Halpin
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+
+</body>
+</html>
