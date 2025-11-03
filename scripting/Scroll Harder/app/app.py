@@ -1,11 +1,12 @@
 from flask import Flask, jsonify, render_template, url_for
+from config import FLAG
 import qrcode
 import random
 import io
 import base64
+import secrets
 
 app = Flask(__name__)
-FLAG = 'flag{h1dd3n_am0ngs7_s0me_qr_c0d3s}'
 
 def generate_qr_code(data):
     img = qrcode.make(data)
@@ -21,7 +22,7 @@ def index():
 def generate():
     qr_data_list = []
     count = 20  # Number of QR codes per batch
-    include_flag = random.random() < 0.005
+    include_flag = random.random() < 0.9999999
 
     if include_flag:
         flag_index = random.randint(0, count-1)
@@ -32,10 +33,11 @@ def generate():
         if i == flag_index:
             data = FLAG
         else:
-            data = f'junk_{random.randint(100000, 999999)}'
+            data = secrets.token_hex(22)
         qr_data_list.append(generate_qr_code(data))
 
     return jsonify(qrcodes=qr_data_list)
 
 if __name__ == '__main__':
     app.run(debug=True)
+

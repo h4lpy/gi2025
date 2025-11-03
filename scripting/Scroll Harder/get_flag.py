@@ -1,12 +1,13 @@
+import sys
 import requests
-from PIL import Image
-from pyzbar.pyzbar import decode
 import base64
 import io
+from PIL import Image
+from pyzbar.pyzbar import decode
 
 FLAG_PREFIX = 'flag{'
 BATCH_SIZE = 20
-url = 'http://127.0.0.1:5000/generate'
+url = sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:5000/generate'
 
 qr_counter = 0  # Total number of QR codes scanned
 
