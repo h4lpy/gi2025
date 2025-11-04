@@ -11,7 +11,7 @@ Flag format: `flag{...}`
 ### Flag
 
 ```
-flag{us3_pr0per_mfa_impl3m3ntat1on_k1ds}
+flag{s3ri0usly_b4d_mf4_impl3ment4t1on}
 ```
 
 ### Walkthrough

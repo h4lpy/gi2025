@@ -60,7 +60,6 @@
 
         for (let i = 0; i < length; i++) {
           let v = buf[i];
-          // accept only values < 250 (250 is divisible by 10) to avoid bias
           while (v >= 250) {
             v = crypto.getRandomValues(new Uint8Array(1))[0];
           }
@@ -70,7 +69,6 @@
       }
 
       token = randomDigits(64);
-      // console.log(token);
 
       loginForm.addEventListener('submit',function(e){
         e.preventDefault();
@@ -84,23 +82,19 @@
         const code=(m.value||'').trim();
         const isDigits=/^\d{64}$/.test(code);
 
-        // Check valid 64-digit input
         if(!isDigits){
           alert('You must input a 64-digit code.');
-          tries = 0; // Reset tries
+          tries = 0;
           return;
         }
 
-        // Correct token
         if(code===token){
-          window.location.href='flag.html';
+          window.location.href='2e2aa16109.html';
           return;
         }
 
-        // Increment failed tries
         tries++;
 
-        // Sequential alerts
         if(tries===1){
           alert('Incorrect code, keep trying.');
         } else if(tries===2){
