@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Forgotten Factor</title>
+    <style>
+      :root{--bg:#f7f8fa;--card:#fff;--accent:#111827;--muted:#475569}
+      html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--accent)}
+      .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:24px}
+      .card{width:360px;background:var(--card);border-radius:8px;padding:18px;box-shadow:0 8px 30px rgba(2,6,23,0.08)}
+      h1{margin:0 0 8px 0;font-size:16px}
+      label{display:block;font-size:13px;color:var(--muted);margin-top:10px}
+      input{width:100%;padding:10px;border-radius:6px;border:1px solid #e6e9ef;margin-top:6px;font-size:14px;box-sizing:border-box}
+      .row{display:flex;gap:8px;margin-top:14px}
+      button{flex:1;padding:10px;border-radius:6px;border:0;background:#0b5fff;color:#fff;cursor:pointer;font-weight:600}
+      .muted{font-size:13px;color:var(--muted);margin-top:12px}
+      .hidden{display:none}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <h1>Sign in</h1>
+
+        <form id="loginForm">
+          <label for="u">Username</label>
+          <input id="u" name="u" type="text"/>
+          <label for="p">Password</label>
+          <input id="p" name="p" type="password"/>
+          <div class="row">
+            <button type="submit">Sign in</button>
+          </div>
+        </form>
+
+        <form id="mfaForm" class="hidden" style="margin-top:12px">
+          <label for="m">Enter MFA code</label>
+          <input id="m" name="m" type="text" maxlength="128"/>
+          <div class="row" style="margin-top:10px">
+            <button id="verify" type="submit">Verify</button>
+          </div>
+        </form>
+
+        <div id="msg" class="muted"></div>
+      </div>
+    </div>
+
+  <script>function _0x1ce8(_0x116b14,_0x490576){const _0x272349=_0x2723();return _0x1ce8=function(_0x1ce8ac,_0x59df32){_0x1ce8ac=_0x1ce8ac-0xe8;let _0xc0c7ff=_0x272349[_0x1ce8ac];return _0xc0c7ff;},_0x1ce8(_0x116b14,_0x490576);}function _0x2723(){const _0x2148b7=['value','18hFCdWf','65728csrzBw','91hqibAa','addEventListener','trim','74568APfJtS','403313VUZTpf','join','6TRauIj','329570KXnLPC','href','A\x20token\x20has\x20been\x20(simulated)\x20sent\x20to\x20your\x20email.','2196140MCUGFB','Still\x20incorrect.','Incorrect\x20code,\x20keep\x20trying.','mfaForm','3398637xfFNyR','textContent','preventDefault','remove','hidden','add','classList','loginForm','test','getRandomValues','msg','toString','4dSFkCA','You\x20must\x20input\x20a\x2064-digit\x20code.','submit','222968pzeoyn','getElementById','flag.html'];_0x2723=function(){return _0x2148b7;};return _0x2723();}(function(_0x4de0ac,_0x5d77b7){const _0x54f110=_0x1ce8,_0x10e6c6=_0x4de0ac();while(!![]){try{const _0x548d08=-parseInt(_0x54f110(0xee))/0x1+-parseInt(_0x54f110(0xe9))/0x2*(parseInt(_0x54f110(0xf0))/0x3)+-parseInt(_0x54f110(0x104))/0x4*(parseInt(_0x54f110(0xf1))/0x5)+-parseInt(_0x54f110(0xed))/0x6*(-parseInt(_0x54f110(0xea))/0x7)+parseInt(_0x54f110(0x107))/0x8*(parseInt(_0x54f110(0xe8))/0x9)+parseInt(_0x54f110(0xf4))/0xa+parseInt(_0x54f110(0xf8))/0xb;if(_0x548d08===_0x5d77b7)break;else _0x10e6c6['push'](_0x10e6c6['shift']());}catch(_0x4a429d){_0x10e6c6['push'](_0x10e6c6['shift']());}}}(_0x2723,0x337f4),(function(){const _0x350f84=_0x1ce8,_0x38cbbc=document[_0x350f84(0x108)](_0x350f84(0xff)),_0x528105=document[_0x350f84(0x108)](_0x350f84(0xf7)),_0x344abe=document[_0x350f84(0x108)](_0x350f84(0x102)),_0x8e4e50=document['getElementById']('m');let _0x49ba77=0x0;function _0x8574b7(_0x47a23a){const _0x19d020=_0x350f84,_0x10a422=new Array(_0x47a23a),_0x3e9d28=new Uint8Array(_0x47a23a);crypto[_0x19d020(0x101)](_0x3e9d28);for(let _0x2b6615=0x0;_0x2b6615<_0x47a23a;_0x2b6615++){let _0x47a373=_0x3e9d28[_0x2b6615];while(_0x47a373>=0xfa){_0x47a373=crypto[_0x19d020(0x101)](new Uint8Array(0x1))[0x0];}_0x10a422[_0x2b6615]=(_0x47a373%0xa)[_0x19d020(0x103)]();}return _0x10a422[_0x19d020(0xef)]('');}token=_0x8574b7(0x40),_0x38cbbc[_0x350f84(0xeb)](_0x350f84(0x106),function(_0x3396eb){const _0x519cf6=_0x350f84;_0x3396eb['preventDefault'](),_0x38cbbc[_0x519cf6(0xfe)][_0x519cf6(0xfd)](_0x519cf6(0xfc)),_0x528105[_0x519cf6(0xfe)][_0x519cf6(0xfb)](_0x519cf6(0xfc)),_0x344abe[_0x519cf6(0xf9)]=_0x519cf6(0xf3);}),_0x528105[_0x350f84(0xeb)](_0x350f84(0x106),function(_0x53ef0c){const _0x5c900d=_0x350f84;_0x53ef0c[_0x5c900d(0xfa)]();const _0x339a67=(_0x8e4e50[_0x5c900d(0x10a)]||'')[_0x5c900d(0xec)](),_0xe3f965=/^\d{64}$/[_0x5c900d(0x100)](_0x339a67);if(!_0xe3f965){alert(_0x5c900d(0x105)),_0x49ba77=0x0;return;}if(_0x339a67===token){window['location'][_0x5c900d(0xf2)]=_0x5c900d(0x109);return;}_0x49ba77++;if(_0x49ba77===0x1)alert(_0x5c900d(0xf6));else{if(_0x49ba77===0x2)alert('Almost\x20there.');else _0x49ba77===0x3?alert('Fine,\x20here\x20is\x20your\x20token:\x20'+token):alert(_0x5c900d(0xf5));}});}()));</script>
+  </body>
+</html>
