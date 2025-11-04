@@ -1,0 +1,8 @@
+# WTBF
+
+
+### Flag
+
+```
+flag{fun_3sol4ng_c0mmand_inj3ct1on}
+```
