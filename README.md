@@ -2,17 +2,12 @@
 
 ## Challenges
 
+- [Cryptography](/cryptography/)
+    - [giS leD arfiC aL](/cryptography/giS%20leD%20arfiC%20aL/)
 - [Forensics](/forensics/)
     - [Stealthy Vector Graphics]()
 - [Scripting](/scripting/)
     - [Scroll Harder](/scripting/Scroll%20Harder/)
 - [Web](/web/)
     - [Forgotten Factor](/web/Forgotten%20Factor/)
-
-
-## CTFd Setup
-
-```shell
-git clone https://github.com/CTFd/CTFd.git
-cd CTFd
-```
+    - [WTBF](/web/WTBF/)
